@@ -9,12 +9,13 @@ function Showtime(){
     {
         Hrs = 12;
     }
+
     if(Hrs > 12)
     {
         Hrs = Hrs - 12;
-        session = "PM";
-        
+        session = "PM";   
     }
+
     if(Hrs < 10)
     {
         Hrs = "0" + Hrs;
@@ -31,8 +32,10 @@ function Showtime(){
     }
 
     var Time = Hrs + ":" + Min + ":" + Sec + " " + session;
+
     document.getElementById("ClockDisplay").innerText = Time;
     document.getElementById("ClockDisplay").textContent = Time;
+    
     setTimeout(Showtime,1000);
 }
 Showtime();
